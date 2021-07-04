@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView percentage;
     private SeekBar SetPercentage;
 
-    private int per,amt;
+    private double per,amt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         SetPercentage.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                per = progress;
                 percentage.setText(progress+"%");
             }
 
@@ -46,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ChangeActivity(View view){
-        
+        Intent intent = new Intent(this,Tip.class);
+
+        amt = Double.parseDouble(amount.getText().toString());
+
+        intent.putExtra("amount",amt);
+        intent.putExtra("percentage",per);
+
+        startActivity(intent);
     }
 }

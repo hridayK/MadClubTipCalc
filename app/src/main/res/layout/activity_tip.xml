@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".Tip">
 
+    <TextView
+        android:id="@+id/tipamt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="66sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.027"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="224dp"
+        android:textAlignment="center"
+        android:textSize="66sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="52dp"
+        android:text="Tip Amount is:"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
