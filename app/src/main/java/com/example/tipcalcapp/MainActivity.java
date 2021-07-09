@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
             bill = Double.parseDouble(BillAmount.getText().toString());
 
-            intent.getDoubleExtra("bill_amount",bill);
-            intent.getDoubleExtra("tip_percent",percentage);
+            intent.putExtra("bill_amount",bill);
+            intent.putExtra("tip_percentage",percentage);
 
             startActivity(intent);
         }
