@@ -27,7 +27,7 @@ public class BillActivity extends AppCompatActivity {
         total = intent.getDoubleExtra("bill_amount",0);
         bill.setText("₹"+Double.toString(total));
         percentage = intent.getDoubleExtra("tip_percentage",0);
-        tip.setText("₹"+Double.toString(total*(percentage/100.0)));
+        tip.setText("₹"+String.format("%.2f",(total*(percentage/100.0))));
 
     }
 }

@@ -10,8 +10,9 @@
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/teal_700"
+        android:textColor="#FFFDE1"
         android:textSize="60sp"
+        android:textAlignment="center"
         android:text="Your Bill:"
         />
 
@@ -19,8 +20,9 @@
         android:id="@+id/billamt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/purple_700"
+        android:textColor="#51EAEA"
         android:textSize="60sp"
+        android:textAlignment="center"
         android:text=""
         android:layout_marginTop="24sp"
         />
@@ -28,9 +30,10 @@
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/teal_700"
+        android:textColor="#FFFDE1"
         android:textSize="60sp"
         android:layout_marginTop="24sp"
+        android:textAlignment="center"
         android:text="Tip Amount:"
         />
 
@@ -38,8 +41,9 @@
         android:id="@+id/tipamt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/purple_700"
+        android:textColor="#51EAEA"
         android:textSize="60sp"
+        android:textAlignment="center"
         android:text=""
         android:layout_marginTop="24sp"
         />
