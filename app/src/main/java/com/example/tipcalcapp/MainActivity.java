@@ -20,9 +20,9 @@ import com.google.android.material.textview.MaterialTextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Slider PercentageSet;
-    private MaterialTextView PercentageView;
-    private TextInputEditText BillAmount;
+    private Slider percentageSet;
+    private MaterialTextView percentageView;
+    private TextInputEditText billAmount;
     private MaterialButton change;
 
     double percentage,bill;
@@ -35,30 +35,30 @@ public class MainActivity extends AppCompatActivity {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 
-        PercentageSet = (Slider) findViewById(R.id.percentage);
-        PercentageView = (MaterialTextView) findViewById(R.id.perview);
-        BillAmount = (TextInputEditText) findViewById(R.id.amt);
+        percentageSet = (Slider) findViewById(R.id.percentage);
+        percentageView = (MaterialTextView) findViewById(R.id.perview);
+        billAmount = (TextInputEditText) findViewById(R.id.amt);
         change = (MaterialButton) findViewById(R.id.pariwartan);
 
-        PercentageSet.addOnChangeListener(new Slider.OnChangeListener() {
+        percentageSet.addOnChangeListener(new Slider.OnChangeListener() {
             @Override
             public void onValueChange(@NonNull Slider slider, float value, boolean fromUser) {
                 int per = (int) value;
                 percentage = value;
-                PercentageView.setText(Integer.toString(per)+"%");
+                percentageView.setText(Integer.toString(per)+"%");
             }
         });
     }
 
     public void ChangeActivity(View view){
-        if (BillAmount.getText().toString().isEmpty())
+        if (billAmount.getText().toString().isEmpty())
             Toast.makeText(this,"you have not entered bill amount",0).show();
-        else if(!isDouble(BillAmount.getText().toString()))
+        else if(!isDouble(billAmount.getText().toString()))
             Toast.makeText(this,"you have not entered a number",0).show();
         else{
             Intent intent = new Intent(this, BillActivity.class);
 
-            bill = Double.parseDouble(BillAmount.getText().toString());
+            bill = Double.parseDouble(billAmount.getText().toString());
 
             intent.putExtra("bill_amount",bill);
             intent.putExtra("tip_percentage",percentage);
